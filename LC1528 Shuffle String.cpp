@@ -1,4 +1,4 @@
-1528. Shuffle String
+// 1528. Shuffle String
 
 class Solution {
 public:
@@ -21,4 +21,17 @@ public:
         return s;
     }
 
+};
+
+class Solution {
+public:
+    string restoreString(string s, vector<int>& a) {
+       int n=a.size();
+        string ans=s;
+        for(int i=0;i<n;i++)
+        {
+            ans[a[i]]=s[i];
+        }
+        return ans;
+    }
 };
