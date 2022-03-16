@@ -1,4 +1,4 @@
-LC1769 Minimum Number of Operations to Move All Balls to Each Box
+// LC1769 Minimum Number of Operations to Move All Balls to Each Box
 class Solution {
 public:
     vector<int> minOperations(string boxes) {
