@@ -13,6 +13,6 @@ public:
             maxi=max(maxi,i);
         }
 
-        return ((double)(sum-mini-maxi))/(n-2);
+        return ((sum-mini-maxi)*1.0)/(n-2);
     }
 };
