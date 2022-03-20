@@ -18,3 +18,29 @@ public:
         return c1==c2;
     }
 };
+
+class Solution {
+public:
+    bool halvesAreAlike(string s) {
+        int n=s.size();
+        int c1=0,c2=0;
+        for(int i=0;i<n/2;i++)
+        {
+            if(isVowel(s[i])) c1++;
+        }
+
+        for(int i=n/2;i<n;i++)
+        {
+            if(isVowel(s[i])) c2++;
+        }
+        return c1==c2;
+    }
+    
+    bool isVowel(char c)
+    {
+        string st="aeiouAEIOU";
+        for(auto i:st)
+            if(c==i) return 1;
+        return 0;
+    }
+};
