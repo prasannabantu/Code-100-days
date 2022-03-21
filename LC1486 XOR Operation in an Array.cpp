@@ -1,4 +1,4 @@
-LC1486 XOR Operation in an Array
+// LC1486 XOR Operation in an Array
 
 class Solution {
 public:
