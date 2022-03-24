@@ -1,4 +1,4 @@
-LC766 Toeplitz Matrix
+// LC766 Toeplitz Matrix
 class Solution {
 public:
     bool isToeplitzMatrix(vector<vector<int>>& matrix) {
