@@ -1,4 +1,4 @@
-LC1605 Find Valid Matrix Given Row and Column Sums
+// LC1605 Find Valid Matrix Given Row and Column Sums
 vector<vector<int>> restoreMatrix(vector<int>& rowSum, vector<int>& colSum) {
         int n=colSum.size();
         int m=rowSum.size();
