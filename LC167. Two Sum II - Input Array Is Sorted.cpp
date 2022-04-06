@@ -18,3 +18,17 @@ public:
         return {-1,-1};
     }
 };
+
+
+vector<int> twoSum(vector<int>& a, int target) {
+        int n=a.size();
+        int l=0; int r=n-1;
+        while(l<r)
+        {
+                if(a[l]+a[r]==target) return {l+1,r+1};
+                 if(a[l]+a[r]<target) l++;
+                 else r--;
+        }
+
+        return {-1,-1};
+    }
