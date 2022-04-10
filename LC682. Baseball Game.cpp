@@ -6,7 +6,7 @@ public:
         for(auto c:ops)
         {   char i=c[0];
             if(i=='+')
-            {
+            { 
                 int a=st.top();
                 st.pop();
                 int b=st.top()+a;
