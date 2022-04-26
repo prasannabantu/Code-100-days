@@ -41,3 +41,20 @@ ListNode* deleteDuplicates(ListNode* head) {
         }
         return head;
 }
+
+ListNode* deleteDuplicates(ListNode* head) {
+        ListNode* t=head;
+        ListNode* r=head;
+        while(r!=NULL)
+        {
+                while(r!=NULL && r->next!=NULL && r->val==r->next->val)
+                {
+                        t=r->next;
+                        r->next=r->next->next;
+                        delete t;
+                }
+                if(r!=NULL)
+                        r=r->next;
+        }
+        return head;
+}
