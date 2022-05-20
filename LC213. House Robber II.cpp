@@ -12,6 +12,7 @@ int maxRob(vector<int>&nums,int beg,int end)
         return cur;
 
 }
+//Just verifying
 int rob(vector<int>& nums) {
         int n=nums.size();
         if(n<2) return n ? nums[0]:0;
