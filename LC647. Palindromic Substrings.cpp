@@ -1,3 +1,5 @@
+
+//Possible TLE
 class Solution {
 public:
 bool isPalindrome(string &s,int beg,int end)
@@ -24,6 +26,42 @@ int countSubstrings(string s) {
                                 cnt++;
                         }
                 }
+        }
+        return cnt;
+}
+};
+
+
+
+//Like two pointer
+class Solution {
+public:
+
+
+int countSubstrings(string s) {
+        int n=s.size();
+        int cnt=s.size();
+        for(int i=0; i<n; i++)
+        {
+                int l=i-1; int r=i+1;
+                while(l>=0 && r<=n-1)
+                {
+                        if(s[l]==s[r]) cnt++;
+                        else break;
+                        l--;
+                        r++;
+                }
+
+                l=i; r=i+1;
+
+                while(l>=0 && r<=n-1)
+                {
+                        if(s[l]==s[r]) cnt++;
+                        else break;
+                        l--;
+                        r++;
+                }
+
         }
         return cnt;
 }
