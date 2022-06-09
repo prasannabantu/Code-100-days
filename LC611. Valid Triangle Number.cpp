@@ -1,5 +1,6 @@
 class Solution {
 public:
+
 int bse(vector<int>&a, int l, int r, int x)
 {
         while(l<=r && r<a.size())
@@ -15,6 +16,7 @@ int bse(vector<int>&a, int l, int r, int x)
         return l;
 
 }
+
 int triangleNumber(vector<int>& nums) {
         sort(nums.begin(),nums.end());
         int cnt=0;
