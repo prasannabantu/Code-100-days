@@ -61,3 +61,31 @@ int pivotIndex(vector<int>& nums) {
         return -1;
 }
 };
+
+class Solution {
+public:
+int pivotIndex(vector<int>& nums) {
+        vector<long>v;
+        for(auto i:nums)
+                v.push_back(i);
+        partial_sum(v.begin(),v.end(),v.begin());
+
+        int n=nums.size();
+        long sum=v[n-1];
+//         for(int i=0;i<n;i++)
+//         {
+//             cout<<v[i]<<" ";
+//         }
+//         cout<<"\n";
+//         for(int i=0;i<n;i++)
+//         {
+//             cout<<sum-v[i]<<" ";
+//         }
+
+        for(int i=0; i<n; i++)
+        {
+                if(sum-v[i]==v[i]-nums[i]) return i;
+        }
+        return -1;
+}
+};
