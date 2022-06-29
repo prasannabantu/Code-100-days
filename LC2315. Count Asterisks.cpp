@@ -23,3 +23,18 @@ int countAsterisks(string s) {
 
 }
 };
+
+class Solution {
+public:
+int countAsterisks(string s) {
+        int res=0; int pip=0;
+        for(auto c:s)
+        {
+                pip+=(c=='|');
+                res+=(c == '*' && pip%2==0);
+        }
+        return res;
+
+
+}
+};
