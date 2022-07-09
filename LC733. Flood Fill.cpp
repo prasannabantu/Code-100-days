@@ -24,3 +24,32 @@ vector<vector<int> > floodFill(vector<vector<int> >& image, int sr, int sc, int 
         return image;
 }
 };
+
+
+
+
+
+
+class Solution {
+public:
+int ori;
+
+void dfs(vector<vector<int> > &image,int sr,int sc,int color)
+{
+        if(sr<0 || sr>image.size()-1 || sc<0 || sc>image[0].size() || image[sr][sc]==color || image[sr][sc]!=ori)
+        {
+                return;
+        }
+        image[sr][sc]=color;
+        dfs(image,sr+1,sc,color);
+        dfs(image,sr,sc+1,color);
+        dfs(image,sr-1,sc,color);
+        dfs(image,sr,sc-1,color);
+}
+vector<vector<int> > floodFill(vector<vector<int> >& image, int sr, int sc, int color) {
+        ori=image[sr][sc];
+        if(ori==color) return image;
+        dfs(image,sr,sc,color);
+        return image;
+}
+};
