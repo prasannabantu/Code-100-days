@@ -14,4 +14,5 @@ vector<int> numberOfPairs(vector<int>& nums) {
                 }
         return a;
 }
+
 };
