@@ -22,3 +22,30 @@ vector<string> letterCasePermutation(string s) {
 
 }
 };
+
+
+
+class Solution {
+public:
+
+void combine(string s,int i,int n,vector<string>&res)
+{
+        if(i>=n)
+        {
+                res.push_back(s);
+                return;
+        }
+
+        combine(s,i+1,n,res);
+        if(isalpha(s[i])) s[i]^=' '; else return;
+        combine(s,i+1,n,res);
+}
+
+vector<string> letterCasePermutation(string s) {
+        vector<string>res;
+        int n=s.size();
+        combine(s,0,n,res);
+        return res;
+
+}
+};
