@@ -1,3 +1,26 @@
+
+
+
+class Solution {
+public:
+int inorder(TreeNode* root,int &val,int &mini)
+{
+        if(root->left) inorder(root->left,val,mini);
+        if(val>=0) mini=min(mini,root->val-val);
+        val=root->val;
+        if(root->right) inorder(root->right,val,mini);
+        return mini;
+
+}
+int getMinimumDifference(TreeNode* root) {
+        int val=-1;
+        int mini=INT_MAX;
+        return inorder(root,val,mini);
+}
+};
+
+
+
 class Solution {
 public:
 void inorder(TreeNode* root,vector<int>&order)
