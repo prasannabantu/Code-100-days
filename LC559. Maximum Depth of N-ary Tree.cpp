@@ -1,5 +1,6 @@
 class Solution {
 public:
+
 int helper(Node* root,int depth)
 {
         if(!root) return depth;
@@ -11,6 +12,7 @@ int helper(Node* root,int depth)
         }
         return maxi;
 }
+
 int maxDepth(Node* root) {
         if(!root) return 0;
         return helper(root,0);
