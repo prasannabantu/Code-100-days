@@ -1,4 +1,4 @@
-class Solution { 
+class Solution {  
 public:
 long long ncount(int n)
 {
